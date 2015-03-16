@@ -15,4 +15,11 @@ func main() {
 
     s2 := cryptoutils.AESDecrypt(key, s1)
     fmt.Println(s2, utf8.RuneCountInString(s2))
+
+    s1 = cryptoutils.AESEncrypt2(key, text)
+    fmt.Println(s1)
+    s2 = cryptoutils.AESDecrypt(key, s1)
+    fmt.Println(s2, utf8.RuneCountInString(s2))
+
+    fmt.Println("MD5 admin:", cryptoutils.MD5("admin"))
 }
