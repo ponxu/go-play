@@ -14,6 +14,7 @@ func main() {
     defer file.Close()
 
     s := time.Now().UnixNano() / 1000000
+    // 2.8G
     for i := 0; i < 100000000; i++ {
         fmt.Fprintf(file, "%d %f\n", time.Now().UnixNano()/1000000, 1234567.89)
         if i%10000 == 0 {
